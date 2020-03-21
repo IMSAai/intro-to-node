@@ -13110,10 +13110,10 @@ $\text{Last Revised: March 2020}$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">someString</span> <span class="o">=</span> <span class="sb">`hello, world!`</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">someVarString</span> <span class="o">=</span> <span class="sb">`hello, world!`</span>
 </pre></div>
 
     </div>
@@ -13131,10 +13131,23 @@ $\text{Last Revised: March 2020}$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>let</code> was introduced with the ECMAScript 6th edition draft. It is designed to store changing values. Its scope is different from <code>var</code> in that it is only accessible in the block that it was defined. <code>let</code> is not hoisted as “var” is; this means that calling a <code>let</code>-declared variable before it has been assigned a value will result in a <code>ReferenceError</code>. <code>let</code> does not add values to the global object property.</p>
+<p><code>let</code> was introduced with the ECMAScript 6th edition draft. It is designed to store changing values. Its scope is different from <code>var</code> in that it is only accessible in the block that it was defined. <code>let</code> is not hoisted as “var” is; this means that calling a <code>let</code>-declared variable before it has been assigned a value will result in a <code>ReferenceError</code>. <code>let</code> does not add values to the global object property. Redefining a <code>let</code> as a new variable will result in an error.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">let</span> <span class="nx">someLetString</span> <span class="o">=</span> <span class="s1">&#39;hello, let world!&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13153,16 +13166,34 @@ $\text{Last Revised: March 2020}$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">someConstString</span>  <span class="o">=</span> <span class="s1">&#39;hello, const world!&#39;</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Additional-Resources">Additional Resources<a class="anchor-link" href="#Additional-Resources">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var</a><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let</a><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const</a><br>
+<a href="https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var">https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var</a></p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
