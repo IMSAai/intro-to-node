@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>lesson1</title>
+<title>lesson2</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,7 +13077,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Unit-2,-Lesson-1">Unit 2, Lesson 1<a class="anchor-link" href="#Unit-2,-Lesson-1">&#182;</a></h1><p>$\textbf{Variables in Node.JS}$<br>
+<h1 id="Unit-2,-Lesson-2">Unit 2, Lesson 2<a class="anchor-link" href="#Unit-2,-Lesson-2">&#182;</a></h1><p>$\textbf{Datatypes in Node.JS}$<br>
 $\text{Written by:}  $<br>
 $\text{Dev Singh, Class of 2022}$<br>
 $\text{Last Revised: March 2020}$</p>
@@ -13088,7 +13088,7 @@ $\text{Last Revised: March 2020}$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Unlike languages that you may be used to, such as Python, Node.JS and JavaScript have 3 types of variables: <code>var</code>, <code>let</code>, and <code>const</code>. <code>let</code> and <code>const</code> are more specific types of the generic variable declaration <code>var</code>. Any data type can be stored in any variable, however, they are all slightly different. Let's take a look at these differences.</p>
+<p>Like most scripting languages, JS is a "duck-typed" language, and therefore every variable is defined using the keywords var, let, or const. This variable can contain any type of variable. While most of them should be similar to what you have learned in CSI, let’s go over a few of them.</p>
 
 </div>
 </div>
@@ -13096,14 +13096,14 @@ $\text{Last Revised: March 2020}$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="var"><code>var</code><a class="anchor-link" href="#var">&#182;</a></h2>
+<h2 id="String">String<a class="anchor-link" href="#String">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>var</code> is the most generic form of variables in JS. It could contain a constant value or one that is changeable. <code>var</code> exists in the function scope (its value is present throughout the function in which it was declared).<code>var</code> is also hoisted to the top of the block, meaning that the variable has been initialized in its scope before its value has been declared. <code>var</code> also adds values to the global object property.</p>
+<p>A string is simply a series of characters, like “Hello, world”. They are defined in JS as such:</p>
 
 </div>
 </div>
@@ -13113,7 +13113,7 @@ $\text{Last Revised: March 2020}$</p>
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">someVarString</span> <span class="o">=</span> <span class="sb">`hello, world!`</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">helloWorld</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>
 </pre></div>
 
     </div>
@@ -13124,14 +13124,22 @@ $\text{Last Revised: March 2020}$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="let"><code>let</code><a class="anchor-link" href="#let">&#182;</a></h2>
+<p>You can use both single-quotes and double-quotes for defining strings, but please be consistent! It’s important for other developers to be able to read your code.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>let</code> was introduced with the ECMAScript 6th edition draft. It is designed to store changing values. Its scope is different from <code>var</code> in that it is only accessible in the block that it was defined. <code>let</code> is not hoisted as “var” is; this means that calling a <code>let</code>-declared variable before it has been assigned a value will result in a <code>ReferenceError</code>. <code>let</code> does not add values to the global object property. Redefining a <code>let</code> as a new variable will result in an error.</p>
+<h2 id="Number">Number<a class="anchor-link" href="#Number">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>JS only has one type of numbers (there is no int, float, etc). All numberes are, by default, double precision floating point numbers. Numbers can be written with or without decimals, and in scientific notation.</p>
 
 </div>
 </div>
@@ -13141,7 +13149,9 @@ $\text{Last Revised: March 2020}$</p>
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">let</span> <span class="nx">someLetString</span> <span class="o">=</span> <span class="s1">&#39;hello, let world!&#39;</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">daysSinceLastLogin</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="kr">const</span> <span class="nx">userRating</span> <span class="o">=</span> <span class="mf">6.9</span>
+<span class="kr">const</span> <span class="nx">avagadrosNumber</span> <span class="o">=</span> <span class="mf">6.022e23</span>
 </pre></div>
 
     </div>
@@ -13152,14 +13162,14 @@ $\text{Last Revised: March 2020}$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="const"><code>const</code><a class="anchor-link" href="#const">&#182;</a></h2>
+<h2 id="Booleans">Booleans<a class="anchor-link" href="#Booleans">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>const</code> was also introduced in the ECMAScript 6th edition draft. It is designed to store non-changing values. Reassigning the value of a const will cause an error (to which there are some exceptions). It follows the same rules as <code>let</code>.</p>
+<p>Booleans can only hold two values: true or false. They are very simple to define in JS. They are often used in conditional evaluation (if, elif, else).</p>
 
 </div>
 </div>
@@ -13169,13 +13179,530 @@ $\text{Last Revised: March 2020}$</p>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">someConstString</span>  <span class="o">=</span> <span class="s1">&#39;hello, const world!&#39;</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">let</span> <span class="nx">isSignedIn</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="kd">let</span> <span class="nx">isIMSAStudent</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="kd">let</span> <span class="nx">michaelIsLame</span> <span class="o">=</span> <span class="kc">true</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Undefined-and-Null">Undefined and Null<a class="anchor-link" href="#Undefined-and-Null">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>JS variables without any value have the value undefined. Their type is also undefined. You can empty a variable by setting its value to undefined.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In JS, null is “nothing”. It doesn’t exist. While the value of null is null, the type is Object (this is essentially a bug in JS. null should have the type null). You can empty a variable by setting its value to null.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">let</span> <span class="nx">car</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">car</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>undefined
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">let</span> <span class="nx">carr</span> <span class="o">=</span> <span class="kc">null</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">carr</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">carr</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>null
+object
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Arrays">Arrays<a class="anchor-link" href="#Arrays">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Arrays in JS are the equivalent of lists in Python. They are used to store multiple values in one variable. Data types can be mixed within arrays. Members of arrays can be referred to with their index. <strong>PLEASE REMEMBER: ARRAYS START AT 0!!</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">classes</span> <span class="o">=</span> <span class="p">[</span><span class="kc">false</span><span class="p">,</span> <span class="s2">&quot;LE2&quot;</span><span class="p">,</span> <span class="s2">&quot;AmStud&quot;</span><span class="p">,</span> <span class="s2">&quot;BC 1/2&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;CSI&quot;</span><span class="p">,</span> <span class="s2">&quot;MSI&quot;</span><span class="p">],</span> <span class="s2">&quot;Spanish 3&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">classes</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[
+  false,
+  &#39;LE2&#39;,
+  &#39;AmStud&#39;,
+  &#39;BC 1/2&#39;,
+  [ &#39;CSI&#39;, &#39;MSI&#39; ],
+  &#39;Spanish 3&#39;,
+  false
+]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">classes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">classes</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>7
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">classes</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">length</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>undefined
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">classes</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>MSI
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">classes</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="nx">length</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Objects">Objects<a class="anchor-link" href="#Objects">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>JS objects are written with curly braces {} and store information as name-value pairs. DO NOT confuse these with objects in Object-Oriented Programming; while similar in concept, they do not represent what Object-Oriented Programming is designed to do. We will discuss true Object-Oriented programming later on in the course.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">let</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span><span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Dev&quot;</span><span class="p">,</span> <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&quot;Singh&quot;</span><span class="p">,</span> <span class="nx">hall</span><span class="o">:</span> <span class="mi">1507</span><span class="p">,</span> <span class="nx">wing</span><span class="o">:</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="nx">classes</span><span class="o">:</span><span class="p">[</span><span class="kc">false</span><span class="p">,</span> <span class="s2">&quot;LE2&quot;</span><span class="p">,</span> <span class="s2">&quot;AmStud&quot;</span><span class="p">,</span> <span class="s2">&quot;BC 1/2&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;CSI&quot;</span><span class="p">,</span> <span class="s2">&quot;MSI&quot;</span><span class="p">],</span> <span class="s2">&quot;Spanish 3&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">]}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">firstName</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dev
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">hall</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1507
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">classes</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>7
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">classes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">classes</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="nx">length</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Practice-Exercises">Practice Exercises<a class="anchor-link" href="#Practice-Exercises">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Create an object to represent potential users on a social media network.<ul>
+<li>Use all the datatypes mentioned in this document</li>
+<li>Use the <code>typeof()</code> function and some arithmetic operators (look up what these are in JS!) each at least twice</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13187,10 +13714,8 @@ $\text{Last Revised: March 2020}$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var</a><br>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let</a><br>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const</a><br>
-<a href="https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var">https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var</a></p>
+<p><a href="https://stackoverflow.com/questions/1288594/what-are-javascript-data-types">https://stackoverflow.com/questions/1288594/what-are-javascript-data-types</a><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures</a></p>
 
 </div>
 </div>
